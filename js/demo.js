@@ -1,5 +1,9 @@
 function $(name){return document.getElementById(name);}
 function tag(tagName){return document.getElementsByTagName(tagName);}
+function start(){
+	getTime();
+	getCountdwon();
+}
 function getTime(){
     var date = new Date();
     var day = date.getDay();
@@ -33,11 +37,27 @@ function getTime(){
     }else {
         weeks = weeks/7+1;
     }
-    var h3s = tag("h3");
-    h3s[0].innerHTML = "第"+Math.floor(weeks)+"周";
+    $("week").innerHTML = Math.floor(weeks);
 }
 function changeOption(){
     var index = $("mySelect").selectedIndex;
     $("show").src=$("mySelect").options[index].value;
-    
+}
+function getCountdwon(){
+	var message=$("message");
+	var CET4Date = new Date(2020,11,12); //2020年12月考试时间为2020年12月12日
+	var winterHolidayDate = new Date(2021,0,24); //第一学期(2020-09-07)至(2021-01-24)
+	var summerHolidayDate = new Date(2021,6,11); // 第二学期(2021-03-01)至(2021-07-11)
+	setInterval(function(){
+		var now = new Date();
+		var cet4 = compteCountdown(CET4Date);
+		var winterHoliday = compteCountdown(winterHolidayDate);
+		var summerHoliday = compteCountdown(summerHolidayDate);
+		$("cet4").innerHTML = cet4;
+		$("winter").innerHTML = winterHoliday;
+		$("summer").innerHTML = summerHoliday;
+	},100);	
+}
+function compteCountdown(endDate){
+	return Math.floor((endDate.getTime()-new Date().getTime())/(1000*60*60*24));
 }

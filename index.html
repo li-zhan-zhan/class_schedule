@@ -3,20 +3,13 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>课程表</title>
-		<style type="text/css">
-			td{
-				padding: 10px;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<script type="text/javaScript" src="js/demo.js"></script>
 	</head>
-	<body onload="getTime()" style="min-width: 1100px;">		
-		<div style="margin-top: 50px;">
-			<h2 style="text-align: center;">Z软件工程20-03课程表</h2>
-			
-			<div style="text-align: center;margin-bottom: 10px;"></div>
-			<h3 style="margin-left: 30%;"></h3>
-			<table style="margin: 0 auto; text-align: center;" border="1">
+	<body onload="start()">		
+		<div class="main_div">
+			<h2 class="title">Z软件工程20-03课程表</h2>
+			<table class="main_table" border="1">
 				<tr>
 					<th></th>
 					<th>星期一</th>
@@ -87,8 +80,11 @@
 				</tr>
 			</table>
 		</div>
-
+		<div id="message">
+			<h4 class="week">第<span id="week"></span>周</h4>
+			<h4>距离英语四级考试还有<span id="cet4"></span>天</h4>
+			<h4>距离今年寒假放假还有<span id="winter"></span>天</h4>
+			<h4>距离明年暑假放假还有<span id="summer"></span>天</h4>
+		</div>
 	</body>
-	<scrip>
-	</scrip>
 </html>
