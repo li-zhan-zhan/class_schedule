@@ -33,7 +33,7 @@ function getTime(){
     now+=date.getDate();
     weeks = now-begin;
     if (weeks%7==0){
-        weeks = weeeks/7;
+        weeks = weeks/7;
     }else {
         weeks = weeks/7+1;
     }
