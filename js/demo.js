@@ -1,43 +1,16 @@
 function $(name){return document.getElementById(name);}
 function tag(tagName){return document.getElementsByTagName(tagName);}
 function start(){
-	getTime();
+	getWeeks();
 	getCountdwon();
 }
-function getTime(){
-    var date = new Date();
-    var day = date.getDay();
-    if(day<6){
-        var tds = tag("td");
-        for(var i=day; i<tds.length; i+=7){
-            tds[i].style.color = "red"
-        }
-    }
-    var year = date.getFullYear();
-    var month2;
-    if((year%4==0&&year%100!=0)||year%400==0){
-        month2 = 29;
-    } else {
-        month2 = 28;
-    }
-    var months= [31,month2,31,30,31,30,31,31,30,31,30,31];
-    var begin = 0;
-    for(var i =0; i<9; i++){
-        begin+=months[i];
-    }
-    begin+=7;
-    var now = 0;
-    for(var i=0; i<date.getMonth()+1; i++){
-        now+=months[i];
-    }
-    now+=date.getDate();
-    weeks = now-begin;
-    if (weeks%7==0){
-        weeks = weeks/7;
-    }else {
-        weeks = weeks/7+1;
-    }
-    $("week").innerHTML = Math.floor(weeks);
+function getWeeks(){
+    var now = new Date();
+	var begin = new Date(2020,8,7);
+	var weeksTemp = now.getTime()-begin.getTime();
+	weeksTemp = weeksTemp/(1000*60*60*24*7);
+	var weeks = Math.ceil(weeksTemp);
+    $("week").innerHTML =weeks;
 }
 function changeOption(){
     var index = $("mySelect").selectedIndex;
