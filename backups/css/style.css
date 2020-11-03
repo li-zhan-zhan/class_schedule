@@ -1,0 +1,19 @@
+body{
+	 min-width: 1100px;
+}
+.title{
+	text-align: center;
+}
+.main_div{
+	margin-top: 90px;
+}
+.main_table{
+	margin: 0 auto; 
+	text-align: center;
+}
+td{
+	padding: 0 10px;
+}
+.week{
+	margin-left: 30%;
+}
