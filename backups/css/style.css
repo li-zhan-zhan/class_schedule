@@ -5,7 +5,7 @@ body{
 	text-align: center;
 }
 .main_div{
-	margin-top: 90px;
+	margin:0 90px;
 }
 .main_table{
 	margin: 0 auto; 
