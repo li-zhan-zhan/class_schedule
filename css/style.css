@@ -5,7 +5,7 @@ body{
 	text-align: center;
 }
 .main_div{
-	margin-top: 90px;
+	margin-top: 40px;
 }
 .main_table{
 	margin: 0 auto; 
@@ -17,12 +17,17 @@ td{
 #message{
 	width: 230px;
 	height: 100px;
-	position: absolute;
-	top: 10px;
-	left: 69%;
 	padding: 10px;
-	border: 1px solid;
+	border: 1px solid black;
+	margin: 0 auto;
+	margin-bottom: 10px;
 }
 #message h4{
 	margin: 2px;
+}
+#message span{
+	color: red;
+}
+.del{
+	text-decoration: line-through;
 }

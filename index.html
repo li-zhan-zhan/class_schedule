@@ -8,6 +8,12 @@
 	<body onload="start()">		
 		<div class="main_div">
 			<h2 class="title">Z软件工程20-03课程表</h2>
+			<div id="message">
+				<h4 class="week">第<span id="week"></span>周</h4>
+				<h4>距离英语四级考试还有<span id="cet4"></span>天</h4>
+				<h4>距离今年寒假放假还有<span id="winter"></span>天</h4>
+				<h4>距离明年暑假放假还有<span id="summer"></span>天</h4>
+			</div>
 			<table class="main_table" border="1">
 				<tr>
 					<th></th>
@@ -22,7 +28,7 @@
 					<td rowspan="2">Python (考查) <br>[1-16周] 软件楼501</td>
 					<td rowspan="2">数据结构与算法 (考试) <br>[1-16单周] 二教楼810 <br>
 															[2-16双周] 软件楼408</td>
-					<td rowspan="2"><del>形式与政策 (考查) <br>[5-8周] 二教楼916</del> <br>
+					<td rowspan="2"><span class="del">形式与政策 (考查) <br>[5-8周] 二教楼916</span> <br>
 														软件工程 (考查)<br>[9-13周] 软件楼408</td>
 					<td rowspan="2">马克思主义 (考试) <br>[5-15周] 一教楼509</td>
 					<td rowspan="2">Java (考试) <br>[1-14双周] 一教楼311 <br
@@ -58,32 +64,27 @@
 				<tr>
 					<td>第七节 <br> 16:40-17:30</td>
 					<td rowspan="2">Java (考试) <br>[3-14周] 软件楼408</td>
-					<td rowspan="2">Jsp (考查) <br>[1-11周] 一教楼609</td>
-					<td rowspan="2">Web (考查) <br>[1-10周] 二教楼414</td>
+					<td rowspan="2" class="del">Jsp (考查) <br>[1-11周] 一教楼609</td>
+					<td rowspan="2" class="del">Web (考查) <br>[1-10周] 二教楼414</td>
 					<td rowspan="2"></td>
-					<td rowspan="2"><del>Linux (考查) <br>[1-8周] 一教楼513</del></td>
+					<td rowspan="2" class="del"><del>Linux (考查) <br>[1-8周] 一教楼513</del></td>
 				</tr>
 				<tr>
 					<td>第八节 <br> 17:40-18:30</td>
 				</tr>
 				<tr>
 					<td>第九节 <br> 19:30-20:20</td>
-					<td rowspan="2">Linux (考查)<br>[3-10周] 软件楼501</td>
+					<td rowspan="2" class="del">Linux (考查)<br>[3-10周] 软件楼501</td>
 					<td rowspan="2"></td>
 					<td rowspan="2"></td>
-					<td rowspan="2">Jsp (考查) <br>[4-10周] 软件楼408</td>
+					<td rowspan="2" class="del">Jsp (考查) <br>[4-10周] 软件楼408</td>
 					<td rowspan="2"></td>
 				</tr>
 				<tr>
 					<td>第十节 <br> 20:30-21:20</td>
 				</tr>
 			</table>
-		</div>
-		<div id="message">
-			<h4 class="week">第<span id="week"></span>周</h4>
-			<h4>距离英语四级考试还有<span id="cet4"></span>天</h4>
-			<h4>距离今年寒假放假还有<span id="winter"></span>天</h4>
-			<h4>距离明年暑假放假还有<span id="summer"></span>天</h4>
+		
 		</div>
 	</body>
 	<script type="text/javaScript" src="js/demo.js"></script>
